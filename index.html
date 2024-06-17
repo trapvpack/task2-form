@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="normalize.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title></title>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+</head>
+<body>
+<div class="main">
+    <div class="form-background">
+        <form action="#" class="form" method="POST">
+            <span>Транспортные средства и водители</span>
+
+            <label for="gov-number">Гос-номер</label>
+            <input class="input" id="gov-number" name="gov-number"
+                   placeholder="Укажите гос-номер"
+                   required type="text" value="">
+
+            <label for="car">Транспортное средство</label>
+            <input class="input" id="car" name="car" placeholder="Транспортное средство" required type="text">
+
+            <label for="arrival-date">Ориентировочная дата прибытия к покупателю</label>
+            <input class="input" id="arrival-date" name="arrival-date"
+                   onfocus="(this.type='date')"
+                   onfocusout="this.type='text'"
+                   placeholder="Дата"
+                   required type="text">
+
+
+            <span id="driver-data">Данные о водителе</span>
+            <label for="initials">ФИО</label>
+            <input class="input" id="initials" name="initials" placeholder="Укажите ФИО водителя" required type="text">
+
+            <label for="passport-series">Паспортные данные</label>
+            <div class="passport-data">
+                <input class="input" id="passport-series" name="passport-series" placeholder="Серия" required
+                       type="text">
+                <label for="passport-number" style="display: none"></label>
+                <input class="input" id="passport-number" name="passport-number" placeholder="Номер" required
+                       type="number">
+            </div>
+
+
+            <label for="issuer">Кем выдан</label>
+            <input class="input" id="issuer" name="issuer" placeholder="Кем выдан" required type="text">
+
+            <label for="issue-date">Когда выдан</label>
+            <input class="input" id="issue-date" name="issue-date" onfocus="(this.type='date')"
+                   onfocusout="this.type='text'"
+                   placeholder="Когда выдан"
+                   required type="text">
+
+            <div class="buttons">
+                <button class="submit" type="submit">Отправить</button>
+                <button class="cancel" type="reset">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
